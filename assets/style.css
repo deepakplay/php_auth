@@ -74,7 +74,7 @@ main{
 
 form{
 	background-color: #FFF;
-	width:300px;
+	width:280px;
 	padding: 20px;
 	border-radius: 10px;
 	display: flex;
@@ -83,11 +83,16 @@ form{
 	top:50%;
 	right: 50px;
 	transform: translateY(-50%);
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }
 
 form div{
 	display: flex;
 	flex-direction: column;
+}
+
+form h2{
+	text-align: center;
 }
 
 form div label{
@@ -106,13 +111,14 @@ form div input{
 }
 
 form .submit{
-	align-self: flex-end;
+	align-self: center;
 	padding: 10px 15px;
 	border-radius:5px;
-	margin-top:5px;
-	background-color: #66F;
+	margin-top:10px;
+	background-color: #44F;
 	color: #FFF;
 }
+
 
 form .submit:hover{
 	box-shadow: 0 0 5px rgba(0,0,0,.3);
@@ -124,8 +130,19 @@ form div input:focus{
 }
 
 
+form .new_site{
+	align-self: center;
+	margin-top: 15px;
+}
+
 @media (max-width: 500px){
 	footer {
 		justify-content: center;
+	}
+
+	form{
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
