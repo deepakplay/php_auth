@@ -1,0 +1,131 @@
+*{
+	border:0px;
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: arial, sans-sarif;
+	font-size:.9rem;
+	background:#EEF;
+	position:relative;
+	height: 80vh;
+}
+
+header{
+	width: 100%;
+	padding: 15px;
+	background-color: #66F;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+	color:#FFF;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+
+
+header nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav ul a{
+	color: #FFF;
+	
+	margin: 0 10px;
+	border-radius: 5px;
+}
+
+header nav ul a:hover{
+	color: #F44;
+	text-shadow: 0 0 2px #F44;
+	transition: all .2s ease;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding:10px 20px;
+	background-color: #555;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	color:#FFF;
+}
+
+footer a{
+	color:#F55;
+}
+
+
+
+main{
+	width:100%;
+}
+
+form{
+	background-color: #FFF;
+	width:300px;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	position:absolute;
+	top:50%;
+	right: 50px;
+	transform: translateY(-50%);
+}
+
+form div{
+	display: flex;
+	flex-direction: column;
+}
+
+form div label{
+	color: #333;
+	margin-top:10px;
+}
+
+
+
+form div input{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 3px;
+	margin: 5px 0;
+	border:1px solid #DDD;
+}
+
+form .submit{
+	align-self: flex-end;
+	padding: 10px 15px;
+	border-radius:5px;
+	margin-top:5px;
+	background-color: #66F;
+	color: #FFF;
+}
+
+form .submit:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+form div input:focus{
+	border:1px solid #AAF;
+	box-shadow: 0 0 3px #AAF;
+}
+
+
+@media (max-width: 500px){
+	footer {
+		justify-content: center;
+	}
+}
