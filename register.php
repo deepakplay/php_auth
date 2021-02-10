@@ -35,4 +35,16 @@
     $stmt->close(); 
     $connection->close();
     header("Location: http://localhost/deepak?login&regsuccess");
+
+    /*
+        deepak@email.com
+        pass@123
+
+        deepak@play.com
+        play@123
+
+        admin@deepak.com
+        admin@#789
+    */
 ?>
+
