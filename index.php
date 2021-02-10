@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Form Submition</title>
+	<title>Auth in PHP</title>
 	<meta charset="utf-8" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/header.css">
+	<link rel="stylesheet" type="text/css" href="assets/form.css">
+	<link rel="stylesheet" type="text/css" href="assets/footer.css">
 	<script src="assets/script.js" defer></script>
 </head>
 <body>
