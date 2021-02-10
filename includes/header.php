@@ -9,7 +9,8 @@
 				</ul>
 			<?php }else{ ?> 
 				<ul>
-					<li><a href="includes/logout.php">Logout</a></li>
+					<li><a href="includes/logout.php"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a></li>
+					<li><a href="/deepak/profile.php"><i class="fas fa-user-circle"></i>&nbsp;Profile</a></li>
 				</ul>
 			<?php } ?> 
 		</nav>

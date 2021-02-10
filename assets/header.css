@@ -26,12 +26,12 @@ header nav ul{
 header nav ul a{
 	color: #FFF;
 	
-	margin: 0 10px;
+	margin: 0 5px;
+	padding: 10px;
 	border-radius: 5px;
 }
 
 header nav ul a:hover{
-	color: #F44;
-	text-shadow: 0 0 2px #F44;
-	transition: all .2s ease;
+	background-color: #77F;
+
 }
