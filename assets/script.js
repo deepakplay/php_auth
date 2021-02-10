@@ -22,6 +22,8 @@ if(page_location.split('&')[0]==="register"){
 	register_form.style.display="none";
 	if(page_location.split('&')[1]=='error'){
 		login_form.querySelector('h2').insertAdjacentHTML('afterend', '<span class="error_form">Invalid email/password</span>');
+	}else if(page_location.split('&')[1]=='regsuccess'){
+		document.querySelector('body').insertAdjacentHTML('afterbegin', '<span class="success_register">Registered Successfully</span>');
 	}
 };
 

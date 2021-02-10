@@ -22,7 +22,7 @@
 
     $fname = $_POST['register_name'];
     $email = $_POST['register_email'];
-    $pass = $_POST['register_pass'];
+    $pass = md5($_POST['register_pass']);
 
     if(empty($email) || empty($pass) || empty($fname)){
     	header("Location: http://localhost/deepak?register&error");
@@ -32,17 +32,7 @@
     }
 
     $stmt->execute();
-    $stmt->store_result();
-    
-    if($stmt->num_rows == 1){
-    	while($stmt->fetch()){
-    		$_SESSION['id']=$id;
-    		header("Location: http://localhost/deepak/welcome.php");
-    	}
-    }else{
-    	header("Location: http://localhost/deepak?login&error");
-		die();
-    }
     $stmt->close(); 
-    $connection->close();*/
+    $connection->close();
+    header("Location: http://localhost/deepak?login&regsuccess");
 ?>

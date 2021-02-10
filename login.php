@@ -15,6 +15,8 @@
 		die();
     }
 
+    $pass = md5($_POST['login_pass']);
+
     $stmt->execute();
     $stmt->store_result();
 

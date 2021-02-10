@@ -95,6 +95,23 @@ form .new_site{
 	text-align: center;
 }
 
+.success_register{
+	display: block;
+	background-color: #d4edda;
+	border:1px solid #c3e6cb;
+	padding: 10px;
+	color:#155724;
+	top:70px;
+	left:50%;
+	transform: translateX(-50%);
+	position: absolute;
+	border-radius:5px;
+	font-size: .9rem;
+
+	text-align: center;
+
+}
+
 @media (max-width: 500px){
 	body{
 		justify-content: center;
