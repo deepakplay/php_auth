@@ -2,7 +2,7 @@
 	<header>
 		<span class="logo">PHP Site</span>
 		<nav>			
-			<?php if(!($_SESSION["id"])){ ?> 
+			<?php if(!isset($_SESSION["id"])){ ?> 
 				<ul>
 					<li><a href="/deepak/?login">Login</a></li>
 					<li><a href="/deepak/?register">Register</a></li>

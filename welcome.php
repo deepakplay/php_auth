@@ -15,7 +15,6 @@
 	<?php include('includes/header.php')?>
 
 	<?php
-		session_start();
 		include 'includes/connect.php';
 		$stmt = $connection->prepare("SELECT fname FROM users WHERE id=?");
 		$stmt->bind_param('s', $id);
