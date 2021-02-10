@@ -1,0 +1,106 @@
+body{
+	font-size:.9rem;
+	background:#EEF;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 0 40px;
+}
+
+form{
+	background-color: #FFF;
+	width:280px;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+
+form div{
+	display: flex;
+	flex-direction: column;
+}
+
+form h2{
+	text-align: center;
+	text-transform: uppercase;
+	color:#444;
+}
+
+form div label{
+	color: #333;
+	margin-top:10px;
+	margin-bottom:2px;
+}
+
+form div input{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 3px;
+	margin: 5px 0;
+	border:1px solid #DDD;
+}
+
+form .submit{
+	align-self: center;
+	padding: 10px 20px;
+	border-radius:8px;
+	margin-top:10px;
+	background-color: #44F;
+	color: #FFF;
+}
+
+
+form .submit:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,.4);
+	background-color: #55F;
+	transition: all .2s ease;
+}
+
+form div input:focus{
+	border:1px solid #AAF;
+	box-shadow: 0 0 3px #AAF;
+}
+
+.error_input{
+	border:1px solid #F88  !important;
+	box-shadow: 0 0 3px #F88 !important;
+}
+
+.error_msg{
+	color: #F33;
+	font-size: .9rem;
+}
+
+
+form .new_site{
+	display: block;
+	align-self: center;
+	margin-top: 15px;
+}
+
+.error_form{
+	display: inline-block;
+	background-color: #FEE;
+	padding: 10px;
+	color:#F00;
+	margin-top:5px;
+	border-radius:5px;
+	font-size: .9rem;
+	text-align: center;
+}
+
+@media (max-width: 500px){
+	body{
+		justify-content: center;
+	}
+	
+	footer {
+		justify-content: center;
+	}
+}
