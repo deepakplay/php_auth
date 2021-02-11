@@ -3,8 +3,8 @@
 		$query = "SELECT id, fname, email, gender, phone, dob, country FROM users
 INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 		$stmt = $connection->prepare($query);
-		$stmt->bind_param('s', $id);
-		$id=$_SESSION['id'];
+		$stmt->bind_param('i', $id);
+		$id=intval($_SESSION['id']);
 		$stmt->execute();
 		$stmt->store_result();
 		$stmt->bind_result($id, $fname, $email, $gender, $phone, $dob, $country);
@@ -14,8 +14,8 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 		if(!isset($id)){
 			$query = "SELECT fname, email FROM users WHERE id=?";
 			$stmt = $connection->prepare($query);
-			$stmt->bind_param('s', $id);
-			$id=$_SESSION['id'];
+			$stmt->bind_param('i', $id);
+			$id=intval($_SESSION['id']);
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->bind_result($fname, $email);
@@ -33,7 +33,6 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 								"us"=> "United State", 
 								"au"=> "Australia");
 ?>
-
 
 <div class="profile_view" >
 	<h2>Profile </h2>
@@ -156,29 +155,30 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 	</div>
 </form>
 
-<div class="change_password" style="display: flex;">
+<div class="change_password" style="display: none;">
 	<div class="container">
+		<h2>Password change</h2>
 		<form method="post" action="change.php" class="password_form">
 			<table>
 				<tr>
 					<td>Current password</td>
 					<td>
 						<span>:&nbsp;&nbsp;</span>
-						<input type="password" name="current_password" id="c_pass">
+						<input type="password" name="current_password" id="c_pass" placeholder="Old password">
 					</td>
 				</tr>
 				<tr>
 					<td>New password</td>
 					<td>
 						<span>:&nbsp;&nbsp;</span>
-						<input type="password" name="new_password" id="n_pass">
+						<input type="password" name="new_password" id="n_pass" placeholder="New password">
 					</td>
 				</tr>
 				<tr>
 					<td>Re-enter password</td>
 					<td>
 						<span>:&nbsp;&nbsp;</span>
-						<input type="password" name="renew_password" id="rn_pass">
+						<input type="password" name="renew_password" id="rn_pass" placeholder="New password">
 					</td>
 				</tr>
 

@@ -1,3 +1,6 @@
 	<footer>
-		<p>Copyright &copy; <?php echo date('Y')?> <a href="/deepak">Deepak Kumar</a></p>
+		<p>
+			<span>Copyright &copy; <?php echo date('Y')?></span>
+			<a href="<?php echo((isset($_SESSION['id']))?'/deepak/welcome.php':'/deepak?login')?>">Deepak Kumar</a>
+		</p>
 	</footer>

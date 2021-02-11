@@ -29,7 +29,7 @@
     	}
     }else{
     	header("Location: http://localhost/deepak?login&error");
-		die();
+		  die();
     }
     $stmt->close(); 
     $connection->close();

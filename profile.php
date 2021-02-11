@@ -2,12 +2,14 @@
 <?php
 	include 'includes/connect.php';
 	$stmt = $connection->prepare("SELECT fname FROM users WHERE id=?");
-	$stmt->bind_param('s', $id);
-	$id=$_SESSION['id'];
+	$stmt->bind_param('i', $id);
+	$id=intval($_SESSION['id']);
 	$stmt->execute();
 	$stmt->store_result();
 	$stmt->bind_result($fname);
 	$stmt->fetch();
+	$stmt->close();
+	$connection->close();
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +32,5 @@
 
 		<?php include('includes/footer.php')?>
 
-		<?php
-			$stmt->close();
-			$connection->close();
-		?>
 	</body>
 </html>

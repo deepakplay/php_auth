@@ -1,3 +1,4 @@
+'use strict';
 
 let profile_edit = document.querySelector(".profile_edit");
 let profile_view = document.querySelector(".profile_view");
@@ -15,7 +16,6 @@ document.querySelector('.cancel_submit').addEventListener('click', (e)=>{
 	e.preventDefault();
 });
 
-
 function removeError(){
 	Array.from(document.querySelectorAll('.error_input')).forEach((val)=>{
 		val.classList.remove('error_input');
@@ -30,6 +30,9 @@ function insertErrorMsg(element, msg){
 	element.insertAdjacentHTML("afterend", `<span class="error_msg">${msg}</span>`);
 }
 
+function passErrorMsg(element, msg){
+	element.insertAdjacentHTML("afterend", `<span class="error_msg error_msg_pass">${msg}</span>`);
+}
 
 
 profile_edit.addEventListener("submit", function(e){
@@ -38,7 +41,6 @@ profile_edit.addEventListener("submit", function(e){
 	let validForm = true;
 	removeError();
 
-	
 	if(fname.value == '' || fname.value == null){
 		fname.classList.add('error_input');
 		insertErrorMsg(fname, 'Name can\'t be empty');
@@ -54,16 +56,12 @@ profile_edit.addEventListener("submit", function(e){
 	if(!validForm) e.preventDefault();
 });
 
-
-let password_form = document.querySelector('.password_form');
-
-password_form.addEventListener('submit', function(e) {
+document.querySelector('.password_form').addEventListener('submit', function(e) {
 	let cpass = this["current_password"];
 	let npass = this["new_password"];
 	let rnpass = this["renew_password"];
 	let validForm = true;
 	removeError();
-
 	
 	if(cpass.value == '' || cpass.value == null){
 		cpass.classList.add('error_input');
@@ -85,8 +83,32 @@ password_form.addEventListener('submit', function(e) {
 		rnpass.classList.add('error_input');
 		insertErrorMsg(rnpass, 'Re-enter password');
 		validForm = false;	
+	}else if(npass.value != rnpass.value){
+		rnpass.classList.add('error_input');
+		insertErrorMsg(rnpass, 'Does\'t not match');
+		validForm = false;	
 	}
 
 	if(!validForm) e.preventDefault();
+});
+
+document.querySelector('.change_pass').addEventListener('click', (e)=>{
+	document.querySelector('.change_password').style.display="flex";
 	e.preventDefault();
 });
+
+
+document.querySelector('.cancel_password').addEventListener('click', (e)=>{
+	document.querySelector('.change_password').style.display="none";
+	e.preventDefault();
+});
+
+let page_location = window.location.href.split('?')[1];
+if(page_location==="passerror"){
+	profile_view.style.display="none";
+	profile_edit.style.display="flex";
+	document.querySelector('.change_password').style.display="flex";
+	passErrorMsg(document.querySelector('.change_password .container h2'), "Password Incorrect");
+}else if(page_location==="passsuccess"){
+	profile_view.insertAdjacentHTML("beforebegin", `<span class="pass_success">Password Changed!</span>`);
+}

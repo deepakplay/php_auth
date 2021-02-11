@@ -3,7 +3,6 @@
 const login_form = document.querySelector("#login_form");
 const register_form = document.querySelector("#register_form");
 
-
 function insertErrorMsg(element, msg){
 	element.insertAdjacentHTML("afterend", `<span class="error_msg">${msg}</span>`);
 }
@@ -35,7 +34,7 @@ function removeError(){
 
 	Array.from(document.querySelectorAll('.error_msg')).forEach((ele)=>{
 		ele.parentNode.removeChild(ele);
-	})
+	});
 }
 
 login_form.addEventListener("submit", (e)=>{
@@ -66,7 +65,6 @@ register_form.addEventListener('submit', (e)=>{
 	let cpass = this['register_cpass'];
 	let validForm = true;
 	removeError();
-
 
 	if(name.value == "" || name.value == null){
 		name.classList.add('error_input');

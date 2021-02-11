@@ -1,7 +1,7 @@
 .profile_edit, .profile_view{
 	width: 450px;
 	padding: 20px 20px;
-	margin: 40px auto 0;
+	margin: 60px auto 0;
 	border-radius: 10px;
 	background-color:#FFF;
 	box-shadow: 0 0 10px rgba(0,0,0,.2);
@@ -93,7 +93,7 @@
 	background-color: #555;
 	color:#FFF;
 	margin-right: 10px;
-	padding: 5px;
+	padding: 5px 10px;
 	border-radius: 3px;
 }
 
@@ -139,6 +139,34 @@
 	box-shadow: 0 0 10px rgba(0,0,0,.6);
 }
 
+.change_password .container h2{
+	margin-bottom:10px;
+}
+
+.change_password .container table{
+	width: 100%;
+}
+
+.change_password .container table td{
+	padding: 5px 0;
+	color: #333 !important;
+	font-size: .9rem !important;
+}
+
+.change_password .container table input{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 5px;
+	border:1px solid #CCC;
+	color:#333;
+	width: 150px;
+}
+
+.change_password .container table input:focus{
+	border:1px solid #AAF;
+	box-shadow: 0 0 3px #AAF;
+}
+
 .pgroup{
 	width: 100%;
 	display: flex;
@@ -175,29 +203,31 @@
 	background-color: #66F;
 }
 
-.change_password .container table{
-	width: 100%;
+.error_msg_pass{
+	display:block;
+	width: 90%;
+	background-color: #FDD;
+	margin-left: 0 !important;
+	margin:0 auto 10px !important;
+	border:1px solid #F99;
+	color: #F00;
+	text-align: center;
+	padding:6px;
+	border-radius: 5px;
 }
 
-.change_password .container table td{
-	padding: 5px 0;
-	color: #555 !important;
-	font-size: .9rem !important;
+.pass_success{
+	display:block;
+	position:absolute;
+	top:60px;
+	left:50%;
+	transform: translateX(-50%);
+	max-width: 200px;
+	background-color: #DFD;
+	box-shadow: 0 0 5px #9C9;
+	border:1px solid #7A7;
+	color: #090;
+	text-align: center;
+	padding:6px;
+	border-radius: 5px;
 }
-
-.change_password .container table input{
-	padding: 8px;
-	font-size: .9rem;
-	border-radius: 3px;
-	border:1px solid #DDD;
-	color:#333;
-	width: 150px;
-}
-
-
-.change_password .container table input:focus{
-	border:1px solid #AAF;
-	box-shadow: 0 0 3px #AAF;
-}
-
-
