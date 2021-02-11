@@ -158,7 +158,7 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 
 <div class="change_password" style="display: flex;">
 	<div class="container">
-		<form method="post" action="change.php">
+		<form method="post" action="change.php" class="password_form">
 			<table>
 				<tr>
 					<td>Current password</td>

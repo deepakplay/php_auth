@@ -55,9 +55,9 @@ profile_edit.addEventListener("submit", function(e){
 });
 
 
-let change_password = document.querySelector('.change_password');
+let password_form = document.querySelector('.password_form');
 
-change_password.addEventListener('submit', function(e) {
+password_form.addEventListener('submit', function(e) {
 	let cpass = this["current_password"];
 	let npass = this["new_password"];
 	let rnpass = this["renew_password"];
@@ -67,7 +67,23 @@ change_password.addEventListener('submit', function(e) {
 	
 	if(cpass.value == '' || cpass.value == null){
 		cpass.classList.add('error_input');
-		insertErrorMsg(cpass, 'Current password required');
+		insertErrorMsg(cpass, 'Password required');
+		validForm = false;	
+	}
+
+	if(npass.value == '' || npass.value == null){
+		npass.classList.add('error_input');
+		insertErrorMsg(npass, 'Enter password');
+		validForm = false;	
+	}else if(npass.value == cpass.value){
+		npass.classList.add('error_input');
+		insertErrorMsg(npass, 'Can\'t be same');
+		validForm = false;	
+	}
+
+	if(rnpass.value == '' || rnpass.value == null){
+		rnpass.classList.add('error_input');
+		insertErrorMsg(rnpass, 'Re-enter password');
 		validForm = false;	
 	}
 
