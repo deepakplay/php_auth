@@ -8,15 +8,19 @@ create table users(
 
 create table user_table(
 	user_id int primary key,
-    gender enum('m', 'f'),
-    phone varchar(12),
+    gender enum('m', 'f', 'n') default 'n',
+    phone varchar(15),
     dob date default '2000/01/01',
-    country varchar(25) default 'India',
-    state varchar(25) default 'Tamilnadu',
-    foreign key (user_id) references users(id)
-		on delete cascade on update cascade
+    country varchar(25) default 'u',
+    foreign key (user_id) references users(id) on delete cascade on update cascade
 );
+
 
 
 insert into user_table (user_id, gender, phone, dob, country, state) values (1, 'm', '+91987654321', '1998-07-14', 'India', 'Tamilnadu');
 insert into user_table (user_id, gender, phone, dob, country, state) values (2, 'f', '+91234567890', '1990-12-15', 'India', 'Tamilnadu');
+
+
+SELECT id, fname, email, gender, phone, dob, country, state FROM users
+INNER JOIN user_table WHERE users.id=user_table.user_id and id=?;
+

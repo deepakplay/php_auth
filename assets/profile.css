@@ -1,7 +1,117 @@
-.profile_form{
-	max-width: 700px;
-	padding: 30px 20px;
-	margin: 80px auto 0;
+.profile_edit, .profile_view{
+	width: 450px;
+	padding: 20px 20px;
+	margin: 40px auto 0;
 	border-radius: 10px;
 	background-color:#FFF;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	color:#444;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile_edit h2, .profile_view h2{
+	padding-bottom: 5px;
+	padding: 10px 5px;
+	border-bottom:1px solid #CCC;
+	margin-bottom: 5px;
+	align-self: stretch;
+}
+
+.profile_edit input{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 3px;
+	border:1px solid #DDD;
+	color:#333;
+}
+
+.profile_edit input:focus{
+	border:1px solid #AAF;
+	box-shadow: 0 0 3px #AAF;
+}
+
+.profile_edit select{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 3px;
+	border:1px solid #DDD;
+	color:#333;
+	background-color: #FFF;
+}
+.profile_view table, .profile_edit table{
+	margin:10px auto 0;
+	padding:0px 20px;
+}
+
+.profile_view table td, .profile_edit table td {
+	padding: 6px 20px;
+}
+
+.profile_view table .pasword_td, .profile_edit table .pasword_td{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.profile_view table .pasword_td .change_pass, .profile_edit table .pasword_td .change_pass{
+	margin-left: 40px;
+	padding: 5px 8px;
+	background-color: #55F;
+	color: #FFF;
+	border-radius: 3px;
+}
+
+.profile_submit{
+	background-color: #55F;
+	color:#fff !important;
+}
+
+.button_edit{
+	padding: 6px 10px;
+	background-color: #55F;
+	border-radius: 3px;
+	color: #fff;
+	margin-left:auto;
+}
+
+.button_edit:hover{
+	background-color: #77F;
+	transition: all .2s ease;
+	box-shadow: 0 0 5px #77F;
+}
+
+.button_group{
+	margin-top:5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.button_group .cancel_submit{
+	background-color: #555;
+	color:#FFF;
+	margin-right: 10px;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.button_group .cancel_submit:hover{
+	background-color: #F55;
+	color: #FFF;
+	transition: all .2s ease;
+}
+
+.error_input{
+	border:1px solid #F88  !important;
+	box-shadow: 0 0 3px #F88 !important;
+}
+
+.error_msg{
+	color: #F33;
+	display: block;
+	margin-top: 5px;
+	margin-left: 15px;
+	font-size: .9rem;
 }

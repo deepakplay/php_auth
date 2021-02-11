@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/footer.css">
 		<link rel="stylesheet" type="text/css" href="assets/profile.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" />
+		<script src="assets/profile.js" defer></script>
 	</head>
 	<body>
 		<?php include('includes/header.php')?>

@@ -33,7 +33,23 @@
 
     $stmt->execute();
     $stmt->close(); 
+
+
+
+
+    $stmt = $connection->prepare("INSERT INTO user_table SET user_id=(SELECT id FROM users WHERE email=? AND  pass=?)");
+    $stmt->bind_param('ss', $email, $pass);
+
+    $email = $_POST['register_email'];
+    $pass = md5($_POST['register_pass']);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($id);
+        
+    $stmt->close(); 
     $connection->close();
+
+
     header("Location: http://localhost/deepak?login&regsuccess");
 
     /*
