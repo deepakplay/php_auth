@@ -115,3 +115,89 @@
 	margin-left: 15px;
 	font-size: .9rem;
 }
+
+.change_password{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	top:0;
+	backdrop-filter: blur(2px);
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+}
+
+.change_password .container{
+	width: 350px;
+	position: absolute;
+	top:30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+
+.pgroup{
+	width: 100%;
+	display: flex;
+	justify-content:  space-evenly;
+	margin: 0 auto !important;
+	margin-top: 20px !important;
+}
+
+.pgroup .cancel_password, .pgroup .password_change{
+	padding: 5px 10px;
+
+}
+
+.pgroup .cancel_password{
+	background-color: #FFF;
+	color:#00F;
+	border:1px solid #44F;
+	border-radius: 4px;
+}
+
+.pgroup .cancel_password:hover{
+	background-color: #66F;
+	color:#FFF;
+}
+
+
+.pgroup .password_change{
+	background-color: #44F;
+	border-radius: 4px;
+	color:#FFF;
+}
+
+.pgroup .password_change:hover{
+	background-color: #66F;
+}
+
+.change_password .container table{
+	width: 100%;
+}
+
+.change_password .container table td{
+	padding: 5px 0;
+	color: #555 !important;
+	font-size: .9rem !important;
+}
+
+.change_password .container table input{
+	padding: 8px;
+	font-size: .9rem;
+	border-radius: 3px;
+	border:1px solid #DDD;
+	color:#333;
+	width: 150px;
+}
+
+
+.change_password .container table input:focus{
+	border:1px solid #AAF;
+	box-shadow: 0 0 3px #AAF;
+}
+
+

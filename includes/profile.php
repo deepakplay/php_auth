@@ -156,4 +156,39 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 	</div>
 </form>
 
+<div class="change_password" style="display: flex;">
+	<div class="container">
+		<form method="post" action="change.php">
+			<table>
+				<tr>
+					<td>Current password</td>
+					<td>
+						<span>:&nbsp;&nbsp;</span>
+						<input type="password" name="current_password" id="c_pass">
+					</td>
+				</tr>
+				<tr>
+					<td>New password</td>
+					<td>
+						<span>:&nbsp;&nbsp;</span>
+						<input type="password" name="new_password" id="n_pass">
+					</td>
+				</tr>
+				<tr>
+					<td>Re-enter password</td>
+					<td>
+						<span>:&nbsp;&nbsp;</span>
+						<input type="password" name="renew_password" id="rn_pass">
+					</td>
+				</tr>
+
+			</table>
+			<div class="button_group pgroup">
+				<button class="cancel_password">Cancel</button>
+				<input type="submit" name="submit" value="Change" class="password_change">
+			</div>
+		</form>
+	</div>
+</div>
+
 <?php $connection->close() ?>

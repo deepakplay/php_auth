@@ -53,3 +53,24 @@ profile_edit.addEventListener("submit", function(e){
 
 	if(!validForm) e.preventDefault();
 });
+
+
+let change_password = document.querySelector('.change_password');
+
+change_password.addEventListener('submit', function(e) {
+	let cpass = this["current_password"];
+	let npass = this["new_password"];
+	let rnpass = this["renew_password"];
+	let validForm = true;
+	removeError();
+
+	
+	if(cpass.value == '' || cpass.value == null){
+		cpass.classList.add('error_input');
+		insertErrorMsg(cpass, 'Current password required');
+		validForm = false;	
+	}
+
+	if(!validForm) e.preventDefault();
+	e.preventDefault();
+});
