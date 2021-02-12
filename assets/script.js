@@ -12,7 +12,7 @@ if(page_location.split('&')[0]==="register"){
 	login_form.style.display="none";
 	register_form.style.display="flex";
 	if(page_location.split('&')[1]=='error'){
-		register_form.querySelector('h2').insertAdjacentHTML('afterend', '<span class="error_form">Details Error Login</span>');
+		register_form.querySelector('h2').insertAdjacentHTML('afterend', '<span class="error_form">Details Error</span>');
 	}else if(page_location.split('&')[1]=='duplicate'){
 		register_form.querySelector('h2').insertAdjacentHTML('afterend', '<span class="error_form">User already exists</span>');
 	}
@@ -86,13 +86,13 @@ register_form.addEventListener('submit', (e)=>{
 
 	if(cpass.value == '' || cpass.value == null){
 		cpass.classList.add('error_input');
-		insertErrorMsg(cpass, 'Conform your password');
+		insertErrorMsg(cpass, 'Confirm your password');
 		validForm = false;	
 	}
 
 	if(pass.value !== cpass.value){
 		cpass.classList.add('error_input');
-		insertErrorMsg(cpass, 'Passwords didn’t match');
+		insertErrorMsg(cpass, 'Password doesn\'t match');
 		validForm = false;	
 	}
 

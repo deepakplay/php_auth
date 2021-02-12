@@ -85,7 +85,7 @@ document.querySelector('.password_form').addEventListener('submit', function(e) 
 		validForm = false;	
 	}else if(npass.value != rnpass.value){
 		rnpass.classList.add('error_input');
-		insertErrorMsg(rnpass, 'Does\'t not match');
+		insertErrorMsg(rnpass, 'Password doesn\'t match');
 		validForm = false;	
 	}
 
