@@ -1,20 +1,20 @@
 create database php_deepak;
 use php_deepak;
 
-create table users(
-    id int auto_increment primary key,
-    fname varchar(50) not null,
-    email varchar(50) not null,
-    pass varchar(60) not null
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    pass VARCHAR(60) NOT NULL
 );
 
-create table user_table(
-    user_id int primary key,
-    gender enum('m', 'f', 'n') default 'n',
-    phone varchar(15),
-    dob date default '2000/01/01',
-    country varchar(25) default 'u',
-    foreign key (user_id) references users(id) on delete cascade on update cascade
+CREATE TABLE user_table(
+    user_id INT PRIMARY KEY,
+    gender ENUM('m', 'f', 'n') DEFAULT 'n',
+    phone VARCHAR(15),
+    dob DATE DEFAULT '2000/01/01',
+    country VARCHAR(25) DEFAULT 'u',
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 select id, fname, email, pass, gender, phone, dob, country from users inner join user_table where users.id = user_table.user_id;

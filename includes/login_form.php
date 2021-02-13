@@ -11,5 +11,5 @@
 			<input type="password" name="login_pass" id="login_pass" placeholder="Enter the password">	
 		</div>
 		<input type="submit" value="Login" class="submit" >
-		<span class="new_site">New to this site? <a href="/deepak/?register">Register</a></span>
+		<span class="new_site">New to this site? <a href="/?register">Register</a></span>
 </form>

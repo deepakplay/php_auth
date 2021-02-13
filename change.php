@@ -6,7 +6,7 @@
 		empty($_POST["new_password"]) || 
 		empty($_POST["renew_password"]) || 
 		($_POST["renew_password"] != $_POST["new_password"])){
-		header("Location: http://localhost/deepak/profile.php");
+		header("Location: /profile.php");
 		die();
 	}
 
@@ -21,7 +21,7 @@
 	
 
 	if($pass != md5($_POST["current_password"])){
-		header("Location: http://localhost/deepak/profile.php?passerror");
+		header("Location: /profile.php?passerror");
 		die();
 	}else{
 		$stmt = $connection->prepare("UPDATE users set pass=? where id=?");
@@ -31,6 +31,6 @@
 		$stmt->execute();
 		$stmt->close();
 		$connection->close();
-		header("Location: http://localhost/deepak/profile.php?passsuccess");
+		header("Location: /profile.php?passsuccess");
 	}
 ?>

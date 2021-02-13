@@ -22,5 +22,5 @@
 		</div>
 
 		<input type="submit" value="Register" class="submit">
-		<span class="new_site">Already a member? <a href="/deepak/?login">Login</a></span>
+		<span class="new_site">Already a member? <a href="/?login">Login</a></span>
 	</form>

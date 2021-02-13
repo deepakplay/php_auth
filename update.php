@@ -21,7 +21,7 @@
 	$country = $_POST['country'];
 	$stmt->execute();
 	$stmt->close();
-	header("Location: http://localhost/deepak/profile.php");
+	header("Location: /profile.php");
 ?>
 
 

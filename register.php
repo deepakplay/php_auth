@@ -9,7 +9,7 @@
   $stmt->store_result();
 
 	if($stmt->num_rows >= 1){
-    header("Location: http://localhost/deepak?register&duplicate");
+    header("Location: /?register&duplicate");
 		$stmt->close();
 		$connection->close();
 		die();
@@ -25,7 +25,7 @@
   $pass = md5($_POST['register_pass']);
 
   if(empty($email) || empty($pass) || empty($fname)){
-    header("Location: http://localhost/deepak?register&error");
+    header("Location: /?register&error");
     $stmt->close();
     $connection->close();
     die();
@@ -44,6 +44,6 @@
   $stmt->close();
   $connection->close();
   
-  header("Location: http://localhost/deepak?login&regsuccess");
+  header("Location: /?login&regsuccess");
 ?>
 

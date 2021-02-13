@@ -10,7 +10,7 @@
     $pass = $_POST['login_pass'];
 
     if(empty($email) || empty($pass)){
-    	header("Location: http://localhost/deepak?login&error");
+    	header("Location: /?login&error");
 		$stmt->close();
 		die();
     }
@@ -25,10 +25,10 @@
     if($stmt->num_rows == 1){
     	while($stmt->fetch()){
     		$_SESSION['id']=$id;
-    		header("Location: http://localhost/deepak/welcome.php");
+    		header("Location: /welcome.php");
     	}
     }else{
-    	header("Location: http://localhost/deepak?login&error");
+    	header("Location: /login&error");
 		  die();
     }
     $stmt->close(); 
