@@ -132,7 +132,7 @@ INNER JOIN user_table WHERE users.id=user_table.user_id and id=?";
 			<td>DOB</td>
 			<td>
 				<span>:&nbsp;&nbsp;</span>
-				<input maxlength="13" type="date" name="dob" value="<?php echo($dob) ?>">
+				<input maxlength="13" type="date" name="dob" max="<?php echo(date('Y-m-d')) ?>" value="<?php echo($dob) ?>">
 			</td>
 		</tr>
 

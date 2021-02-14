@@ -28,7 +28,7 @@
     		header("Location: /welcome.php");
     	}
     }else{
-    	header("Location: /login&error");
+    	header("Location: /?login&error");
 		  die();
     }
     $stmt->close(); 
